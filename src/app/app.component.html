@@ -1,0 +1,11 @@
+<div>
+  <label for="superheroId">Enter Superhero ID: </label>
+  <input type="number" id="superheroId" [(ngModel)]="inputId" placeholder="Enter ID" />
+  <button (click)="getSuperheroById()">Fetch Superhero</button>
+</div>
+
+<div *ngIf="hero">
+  <h2>{{ hero.name }}</h2>
+  <img [src]="hero.images.lg" alt="{{ hero.name }}">
+</div>
+
